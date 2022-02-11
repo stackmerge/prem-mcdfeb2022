@@ -31,8 +31,8 @@
 					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>4.4.0</muleVersion>
-						<username>${anypoint.username}</username>
-						<password>${anypoint.password}</password>
+						<username>${env.PLATFORM_USERNAME}</username>
+						<password>${env.PLATFORM_PASSWORD}</password>
 						<applicationName>cloudhub-deployment-10022022</applicationName>
 						<environment>Dev</environment>
 						<region>us-east-2</region>
