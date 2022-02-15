@@ -37,6 +37,9 @@ jobs:
     needs: [build]
 
     runs-on: ubuntu-latest
+    env:
+      PLATFORM_USERNAME: ${{ secrets.PLATFORM_USERNAME }}
+      PLATFORM_PASSWORD: ${{ secrets.PLATFORM_PASSWORD }}  
 
     steps:
     - name: Checkout
@@ -58,4 +61,4 @@ jobs:
         artifactName=$(ls *.jar | head -1)
         mvn deploy -DmuleDeploy \
          -Dmule.artifact=$artifactName \
-         -DskipTests         
+         -DskipTests
